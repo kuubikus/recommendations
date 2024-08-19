@@ -15,6 +15,9 @@ void find_restaurant_by_name(Reader& reader, std::string search){
         restaurant found = reader.name_map[search];
         std::cout << "Found: " << found.get_name() << ", " << found.get_food_rating() << ", " << found.get_address() << std::endl;
     }
+    else{
+        std::cout << "No such restaurant found" << std::endl;
+    }
 }
 void find_restaurant_by_address(Reader& reader, std::string search){
     if (reader.address_map.find(search) != reader.address_map.end()) {
